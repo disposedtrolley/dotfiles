@@ -105,7 +105,6 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 # Vim bindings
-
 bindkey -v
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -117,3 +116,6 @@ if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-clou
 # Go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+# Python
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
