@@ -117,3 +117,6 @@ if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-clou
 # Go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+# init z https://github.com/rupa/z
+. ~/z/z.sh
