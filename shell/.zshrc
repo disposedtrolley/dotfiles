@@ -61,7 +61,7 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man colorize brew osx zsh-syntax-highlighting vi-mode)
+plugins=(git colored-man colorize brew osx zsh-syntax-highlighting vi-mode z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -116,9 +116,6 @@ if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-clou
 # Go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-
-# init z https://github.com/rupa/z
-. ~/z/z.sh
 
 # Python
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
