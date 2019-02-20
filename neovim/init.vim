@@ -21,11 +21,14 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'Shougo/deoplete.nvim'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 
+Plug 'marcelbeumer/spacedust.vim'
+Plug 'marcelbeumer/javascript-syntax.vim'
+
 call plug#end()
 
 " Set theme
-let g:seoul256_background = 233
-colo seoul256
+" let g:seoul256_background = 233
+colo spacedust
 set background=dark
 
 " Turn on line numbers
