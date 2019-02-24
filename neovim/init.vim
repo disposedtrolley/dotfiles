@@ -40,13 +40,12 @@ let g:ale_sign_warning = '⚠'
 " Enable integration with airline.
 let g:airline#extensions#ale#enabled = 1
 
-" Golang
-" Indentation
-au FileType go set noexpandtab
-au FileType go set shiftwidth=4
-au FileType go set softtabstop=4
-au FileType go set tabstop=4
+" Default indentation
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
+" Golang
 " Syntax
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_extra_types = 1
@@ -66,3 +65,9 @@ au FileType go nmap <leader>gt :GoDeclsDir<cr>
 au FileType go nmap <F12> <Plug>(go-def)
 
 let g:deoplete#enable_at_startup = 1
+
+" Netrw
+" Remove banner
+let g:netrw_banner = 0
+" Set width to 25%
+let g:netrw_winsize = 25
