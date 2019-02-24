@@ -20,54 +20,23 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'Shougo/deoplete.nvim'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'zchee/deoplete-jedi'
 
 Plug 'marcelbeumer/spacedust.vim'
 Plug 'marcelbeumer/javascript-syntax.vim'
 
+Plug 'arcticicestudio/nord-vim'
+
+Plug 'vim-scripts/indentpython.vim'
+
+Plug 'vim-syntastic/syntastic'
+
 call plug#end()
 
-" Set theme
-" let g:seoul256_background = 233
-colo spacedust
-set background=dark
-
-" Turn on line numbers
-set number
-
-" Error and warning signs.
-let g:ale_sign_error = '⤫'
-let g:ale_sign_warning = '⚠'
-" Enable integration with airline.
-let g:airline#extensions#ale#enabled = 1
-
-" Default indentation
-set tabstop=4
-set shiftwidth=4
-set expandtab
-
 " Golang
-" Syntax
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_types = 1
-
-"let g:go_fmt_command = "goimports"
-let g:go_auto_sameids = 1
-let g:go_auto_type_info = 1
-
-au FileType go nmap <leader>gt :GoDeclsDir<cr>
-
-au FileType go nmap <F12> <Plug>(go-def)
-
+source ~/dotfiles/neovim/lang/go.vim
+" Python
+source ~/dotfiles/neovim/lang/python.vim
 let g:deoplete#enable_at_startup = 1
 
-" Netrw
-" Remove banner
-let g:netrw_banner = 0
-" Set width to 25%
-let g:netrw_winsize = 25
+source ~/dotfiles/neovim/general.vim
