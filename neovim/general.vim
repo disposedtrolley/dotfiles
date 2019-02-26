@@ -15,8 +15,10 @@ vnoremap <leader>p "+p
 vnoremap <leader>P "+P
 
 " Set theme
-colorscheme nord
 set background=dark
+set termguicolors
+colorscheme happy_hacking
+let g:airline_theme='base16'
 
 " Turn on line numbers
 set number
@@ -44,8 +46,3 @@ let g:netrw_browse_split = 4
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0

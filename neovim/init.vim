@@ -1,12 +1,10 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'junegunn/goyo.vim'
-Plug 'junegunn/seoul256.vim'
 Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -23,10 +21,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'zchee/deoplete-jedi'
 
-Plug 'marcelbeumer/spacedust.vim'
-Plug 'marcelbeumer/javascript-syntax.vim'
-
-Plug 'arcticicestudio/nord-vim'
+Plug 'YorickPeterse/happy_hacking.vim'
 
 Plug 'vim-scripts/indentpython.vim'
 
