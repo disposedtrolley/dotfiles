@@ -30,7 +30,8 @@ values."
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '((javascript :variables
+   '(systemd
+     (javascript :variables
                 javascript-backend 'lsp)
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -58,7 +59,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(company company-lsp company-box nord-theme)
+   dotspacemacs-additional-packages '(company company-lsp company-box nord-theme org-web-tools)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -314,11 +315,6 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  ;;(require 'lsp-mode)
-  ;;(require 'lsp-ui)
-  ;;(add-hook 'lsp-mode-hook 'lsp-ui-mode)
-  ;;(add-hook 'lsp-ui-mode-hook 'flycheck-mode)
-
   (require 'company)
   (add-hook 'after-init-hook 'global-company-mode)
   (require 'company-lsp)
@@ -326,6 +322,12 @@ you should place your code here."
 
   (require 'company-box)
   (add-hook 'company-mode-hook 'company-box-mode)
+
+  (require 'org-web-tools)
+
+  (require 'org-download)
+  ;; Drag-and-drop to `dired`
+  (add-hook 'dired-mode-hook 'org-download-enable)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
