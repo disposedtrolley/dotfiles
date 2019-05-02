@@ -15,9 +15,9 @@ vnoremap <leader>p "+p
 vnoremap <leader>P "+P
 
 " Set theme
-set background=dark
+set background=light
 set termguicolors
-colorscheme happy_hacking
+colorscheme cosmic_latte
 let g:airline_theme='base16'
 
 " Turn on line numbers
@@ -46,3 +46,6 @@ let g:netrw_browse_split = 4
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+" Tagbar - http://majutsushi.github.io/tagbar/
+nnoremap <silent> <Leader>b :TagbarToggle<CR>

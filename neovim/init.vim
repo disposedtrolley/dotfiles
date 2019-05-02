@@ -5,6 +5,7 @@ Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'majutsushi/tagbar'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -21,7 +22,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'zchee/deoplete-jedi'
 
-Plug 'YorickPeterse/happy_hacking.vim'
+Plug 'nightsense/cosmic_latte'
 
 Plug 'vim-scripts/indentpython.vim'
 
