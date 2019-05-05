@@ -49,3 +49,6 @@ set statusline+=%*
 
 " Tagbar - http://majutsushi.github.io/tagbar/
 nnoremap <silent> <Leader>b :TagbarToggle<CR>
+
+" CtrlP
+nnoremap <leader>. :CtrlPTag<cr>
