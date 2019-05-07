@@ -15,9 +15,9 @@ vnoremap <leader>p "+p
 vnoremap <leader>P "+P
 
 " Set theme
-set background=light
+set background=dark
+colorscheme snow
 set termguicolors
-colorscheme cosmic_latte
 let g:airline_theme='base16'
 
 " Turn on line numbers

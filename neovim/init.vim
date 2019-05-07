@@ -7,6 +7,11 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'rust-lang/rust.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
+Plug 'nightsense/snow'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -36,5 +41,7 @@ source ~/dotfiles/neovim/lang/go.vim
 " Python
 source ~/dotfiles/neovim/lang/python.vim
 let g:deoplete#enable_at_startup = 1
+" Rust
+source ~/dotfiles/neovim/lang/rust.vim
 
 source ~/dotfiles/neovim/general.vim
