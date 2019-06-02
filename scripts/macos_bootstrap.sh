@@ -1,6 +1,6 @@
-brew_tools=(zsh neovim ctags mosh go git python node)
+brew_tools=(zsh neovim ctags mosh go git python node kubectl)
 brew_taps=(homebrew/cask-fonts)
-brew_casks=(iterm2 dropbox 1password google-chrome the-unarchiver sketch spotify slack visual-studio-code postman alfred font-input intellij-idea-ce qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo steam)
+brew_casks=(iterm2 dropbox 1password google-chrome the-unarchiver sketch spotify slack visual-studio-code postman alfred font-input intellij-idea-ce qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo steam virtualbox minikube)
 
 # Install homebrew
 echo "[homebrew] installing homebrew..."
