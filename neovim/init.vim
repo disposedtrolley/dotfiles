@@ -43,5 +43,7 @@ source ~/dotfiles/neovim/lang/python.vim
 let g:deoplete#enable_at_startup = 1
 " Rust
 source ~/dotfiles/neovim/lang/rust.vim
+" OCaml
+source ~/dotfiles/neovim/lang/ocaml.vim
 
 source ~/dotfiles/neovim/general.vim

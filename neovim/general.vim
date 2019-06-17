@@ -15,7 +15,7 @@ vnoremap <leader>p "+p
 vnoremap <leader>P "+P
 
 " Set theme
-set background=dark
+set background=light
 colorscheme snow
 set termguicolors
 let g:airline_theme='base16'
