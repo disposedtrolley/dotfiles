@@ -9,3 +9,6 @@ au BufNewFile,BufRead *.py
 
 let python_highlight_all=1
 syntax on
+
+let g:python_host_prog = '/Users/james/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/Users/james/.pyenv/versions/neovim3/bin/python'

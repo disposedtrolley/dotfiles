@@ -12,6 +12,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
 Plug 'nightsense/snow'
+Plug 'parsonsmatt/intero-neovim'
+Plug 'davidhalter/jedi-vim'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

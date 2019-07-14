@@ -111,9 +111,6 @@ bindkey -v
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-# Python
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /Users/jamesliu/.nvm/versions/node/v10.15.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/jamesliu/.nvm/versions/node/v10.15.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
@@ -127,8 +124,19 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 # Haskell
 export PATH=$PATH:~/.cabal/bin
 export PATH=$PATH:~/.ghcup/bin
+export PATH=$PATH:~/.local/bin
+
+# pyenv - https://github.com/pyenv/pyenv-installer
+export PATH="/Users/james/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+export PATH=$PATH:$HOME/bin
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/james/.sdkman"
 [[ -s "/Users/james/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/james/.sdkman/bin/sdkman-init.sh"
 function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
