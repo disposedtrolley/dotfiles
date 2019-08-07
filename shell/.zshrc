@@ -133,10 +133,13 @@ eval "$(pyenv virtualenv-init -)"
 
 export PATH=$PATH:$HOME/bin
 
+# Emacs shortcuts
+export ALTERNATE_EDITOR=""
+alias e='emacsclient -c'
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/james/.sdkman"
 [[ -s "/Users/james/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/james/.sdkman/bin/sdkman-init.sh"
 function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
