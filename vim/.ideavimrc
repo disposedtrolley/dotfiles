@@ -1,0 +1,1 @@
+nmap gq :action com.andrewbrookins.idea.wrap.WrapAction<CR>
