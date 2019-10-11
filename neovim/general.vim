@@ -16,7 +16,7 @@ vnoremap <leader>P "+P
 
 " Set theme
 set background=light
-colorscheme snow
+colorscheme NeoSolarized
 set termguicolors
 let g:airline_theme='base16'
 

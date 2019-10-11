@@ -11,7 +11,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
-Plug 'nightsense/snow'
+Plug 'iCyMind/NeoSolarized'
 Plug 'parsonsmatt/intero-neovim'
 Plug 'davidhalter/jedi-vim'
 
