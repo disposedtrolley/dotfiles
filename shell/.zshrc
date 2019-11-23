@@ -107,14 +107,8 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 # Vim bindings
 bindkey -v
 
-# Go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-
 # Haskell
-export PATH=$PATH:~/.cabal/bin
-export PATH=$PATH:~/.ghcup/bin
-export PATH=$PATH:~/.local/bin
+source '/Users/james/.ghcup/env'
 
 # pyenv - https://github.com/pyenv/pyenv-installer
 export PATH="/Users/james/.pyenv/bin:$PATH"
@@ -133,3 +127,19 @@ export SDKMAN_DIR="/Users/james/.sdkman"
 function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH=/Users/james/.local/bin:$PATH
+
+# goenv
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
+
+if [ -e /Users/james/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/james/.nix-profile/etc/profile.d/nix.sh    ; fi # added by Nix installer
+
+# rbenv
+eval "$(rbenv init -)"
