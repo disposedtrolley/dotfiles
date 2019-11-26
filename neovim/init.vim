@@ -11,9 +11,9 @@ Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
-Plug 'iCyMind/NeoSolarized'
 Plug 'parsonsmatt/intero-neovim'
 Plug 'davidhalter/jedi-vim'
+Plug 'morhetz/gruvbox'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -29,8 +29,6 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'Shougo/deoplete.nvim'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'zchee/deoplete-jedi'
-
-Plug 'nightsense/cosmic_latte'
 
 Plug 'vim-scripts/indentpython.vim'
 
