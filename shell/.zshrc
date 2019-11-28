@@ -94,42 +94,58 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# NVM
+
+# ==== Version Managers ====
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
-
-# pyenv - https://github.com/pyenv/pyenv-installer
-export PATH="/Users/james/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-# Emacs shortcuts
-export ALTERNATE_EDITOR=""
-alias e='emacsclient -c'
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
-
+#
 # goenv
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
-
-if [ -e /Users/james/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/james/.nix-profile/etc/profile.d/nix.sh    ; fi # added by Nix installer
-
+#
+# pyenv - https://github.com/pyenv/pyenv-installer
+export PATH="/Users/james/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+#
 # rbenv
 eval "$(rbenv init -)"
 
-# gnu-sed
+
+# ==== Aliases ====
+# emacs
+export ALTERNATE_EDITOR=""
+alias e='emacsclient -c'
+# neovim
+alias nv=nvim
+
+
+# ==== Custom Functions ====
+# gitignore
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# ==== Google Cloud ====
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+
+
+# ==== Nix ====
+if [ -e /Users/james/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/james/.nix-profile/etc/profile.d/nix.sh    ; fi # added by Nix installer
+
+
+# ==== GNU ====
+# sed
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
-# zendesk
+
+# ==== Work ====
 if [ -f $HOME/.zshrc_work ]; then
     source $HOME/.zshrc_work
 fi
