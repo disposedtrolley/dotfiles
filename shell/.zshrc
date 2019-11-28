@@ -100,25 +100,17 @@ export NVM_DIR="$HOME/.nvm"
 
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
-# Vim bindings
-bindkey -v
-
 # pyenv - https://github.com/pyenv/pyenv-installer
 export PATH="/Users/james/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-export PATH=$PATH:$HOME/bin
-
 # Emacs shortcuts
 export ALTERNATE_EDITOR=""
 alias e='emacsclient -c'
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export PATH=/Users/james/.local/bin:$PATH
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 
@@ -137,9 +129,7 @@ eval "$(rbenv init -)"
 # gnu-sed
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
-# haskell
-export PATH="/Users/jaliu/.local/bin:$PATH"
-source '/Users/jaliu/.ghcup/env'
-
 # zendesk
-source $HOME/.zshrc_work
+if [ -f $HOME/.zshrc_work ]; then
+    source $HOME/.zshrc_work
+fi
