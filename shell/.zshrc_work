@@ -1,0 +1,5 @@
+# zendesk AWS stuff
+alias s2a='function(){  PARAM="$@" ; eval $(saml2aws script) ;  bash -ic "$PARAM"; unset SAML2AWS_PROFILE AWS_SECURITY_TOKEN AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN  }'
+# BEGIN ZDI
+source /Users/jaliu/Code/zendesk/zdi/dockmaster/zdi.sh
+# END ZDI

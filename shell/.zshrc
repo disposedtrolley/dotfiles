@@ -96,19 +96,12 @@ source $ZSH/oh-my-zsh.sh
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-autoload -U +X bashcompinit && bashcompinit
-autoload -U compinit && compinit
-complete -o nospace -C /usr/local/bin/vault vault
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 # Vim bindings
 bindkey -v
-
-# Haskell
-source '/Users/james/.ghcup/env'
 
 # pyenv - https://github.com/pyenv/pyenv-installer
 export PATH="/Users/james/.pyenv/bin:$PATH"
@@ -121,16 +114,13 @@ export PATH=$PATH:$HOME/bin
 export ALTERNATE_EDITOR=""
 alias e='emacsclient -c'
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/james/.sdkman"
-[[ -s "/Users/james/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/james/.sdkman/bin/sdkman-init.sh"
-function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH=/Users/james/.local/bin:$PATH
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 
 # goenv
 export GOENV_ROOT="$HOME/.goenv"
@@ -143,3 +133,13 @@ if [ -e /Users/james/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/james/.n
 
 # rbenv
 eval "$(rbenv init -)"
+
+# gnu-sed
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+
+# haskell
+export PATH="/Users/jaliu/.local/bin:$PATH"
+source '/Users/jaliu/.ghcup/env'
+
+# zendesk
+source $HOME/.zshrc_work
