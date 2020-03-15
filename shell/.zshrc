@@ -145,3 +145,15 @@ export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 if [ -f $HOME/.zshrc_work ]; then
     source $HOME/.zshrc_work
 fi
+# arm-gcc-embedded
+export PATH="$HOME/opt/gcc-arm-none-eabi-9-2019-q4-major/bin:$PATH"
+
+# C/C++ compiler alises (macOS aliases these to Clang by default)
+alias gcc='gcc-9'
+alias g++='g++-9'
+alias cc='gcc-9'
+alias c++='c++-9'
+
+# Zephyr
+export ZEPHYR_TOOLCHAIN_VARIANT=gnuarmemb
+export GNUARMEMB_TOOLCHAIN_PATH="$HOME/opt/gcc-arm-none-eabi-9-2019-q4-major"
