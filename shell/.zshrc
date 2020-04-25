@@ -145,8 +145,14 @@ export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 if [ -f $HOME/.zshrc_work ]; then
     source $HOME/.zshrc_work
 fi
+# =============
+
+[ -s "/Users/james/.jabba/jabba.sh" ] && source "/Users/james/.jabba/jabba.sh"
+
 # arm-gcc-embedded
-export PATH="$HOME/opt/gcc-arm-none-eabi-9-2019-q4-major/bin:$PATH"
+
+export ARM_TRIPLE="/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin"
+export PATH="$ARM_TRIPLE:$PATH"
 
 # C/C++ compiler alises (macOS aliases these to Clang by default)
 alias gcc='gcc-9'
@@ -156,7 +162,7 @@ alias c++='c++-9'
 
 # Zephyr
 export ZEPHYR_TOOLCHAIN_VARIANT=gnuarmemb
-export GNUARMEMB_TOOLCHAIN_PATH="$HOME/opt/gcc-arm-none-eabi-9-2019-q4-major"
+export GNUARMEMB_TOOLCHAIN_PATH="$ARM_TRIPLE"
 
 # clangd
 export PATH="/usr/local/opt/llvm/bin/:$PATH"
