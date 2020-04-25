@@ -157,3 +157,6 @@ alias c++='c++-9'
 # Zephyr
 export ZEPHYR_TOOLCHAIN_VARIANT=gnuarmemb
 export GNUARMEMB_TOOLCHAIN_PATH="$HOME/opt/gcc-arm-none-eabi-9-2019-q4-major"
+
+# clangd
+export PATH="/usr/local/opt/llvm/bin/:$PATH"

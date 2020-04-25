@@ -13,6 +13,7 @@ Plug 'parsonsmatt/intero-neovim'
 Plug 'davidhalter/jedi-vim'
 Plug 'morhetz/gruvbox'
 Plug 'dense-analysis/ale'
+Plug 'bfrg/vim-cpp-modern'
 
 Plug 'mdempsky/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
