@@ -151,8 +151,9 @@ fi
 
 # arm-gcc-embedded
 
-export ARM_TRIPLE="/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin"
-export PATH="$ARM_TRIPLE:$PATH"
+export ARM_TRIPLE="/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major"
+export ARM_TRIPLE_BIN="$ARM_TRIPLE/bin"
+export PATH="$ARM_TRIPLE_BIN:$PATH"
 
 # C/C++ compiler alises (macOS aliases these to Clang by default)
 alias gcc='gcc-9'
@@ -166,3 +167,4 @@ export GNUARMEMB_TOOLCHAIN_PATH="$ARM_TRIPLE"
 
 # clangd
 export PATH="/usr/local/opt/llvm/bin/:$PATH"
+export PATH="/usr/local/opt/binutils/bin:$PATH"
