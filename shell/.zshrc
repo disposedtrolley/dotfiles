@@ -127,15 +127,6 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
-# ==== Google Cloud ====
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
-
-
-# ==== Nix ====
-if [ -e /Users/james/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/james/.nix-profile/etc/profile.d/nix.sh    ; fi # added by Nix installer
-
-
 # ==== GNU ====
 # sed
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
@@ -147,24 +138,24 @@ if [ -f $HOME/.zshrc_work ]; then
 fi
 # =============
 
-[ -s "/Users/james/.jabba/jabba.sh" ] && source "/Users/james/.jabba/jabba.sh"
-
 # arm-gcc-embedded
-
-export ARM_TRIPLE="/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major"
+export ARM_TRIPLE="/Applications/ARM"
 export ARM_TRIPLE_BIN="$ARM_TRIPLE/bin"
 export PATH="$ARM_TRIPLE_BIN:$PATH"
 
 # C/C++ compiler alises (macOS aliases these to Clang by default)
-alias gcc='gcc-9'
-alias g++='g++-9'
-alias cc='gcc-9'
-alias c++='c++-9'
+alias gcc='gcc-10'
+alias g++='g++-10'
+alias cc='gcc-10'
+alias c++='c++-10'
 
 # Zephyr
 export ZEPHYR_TOOLCHAIN_VARIANT=gnuarmemb
 export GNUARMEMB_TOOLCHAIN_PATH="$ARM_TRIPLE"
+export ZEPHYR_BASE="/Users/james/zephyrproject/zephyr"
 
-# clangd
-export PATH="/usr/local/opt/llvm/bin/:$PATH"
-export PATH="/usr/local/opt/binutils/bin:$PATH"
+# Created by `userpath` on 2020-09-30 11:52:45
+export PATH="$PATH:/Users/james/.local/bin"
+[ -f "/Users/james/.ghcup/env" ] && source "/Users/james/.ghcup/env" # ghcup-env
+
+alias sw="~/dotfiles/scripts/start_work.sh"
