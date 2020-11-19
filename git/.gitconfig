@@ -1,0 +1,22 @@
+[user]
+	name = James Liu
+	email = james@jamesliu.io
+	username = disposedtrolley
+
+[core]
+	editor = nvim
+
+[alias]
+	st = status --short -uno
+	ci = commit
+	ca = commit --amend
+	caa = commit -a --amend
+	br = branch
+	co = checkout
+	df = diff
+	lg = log -p --pretty=fuller --abbrev-commit
+	lgg = log --pretty=fuller --abbrev-commit --stat
+	up = pull --rebase
+
+[pull]
+	rebase = true
