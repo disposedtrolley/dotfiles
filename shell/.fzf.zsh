@@ -13,4 +13,7 @@ fi
 source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
 # Default behaviour
-export FZF_DEFAULT_OPTS="--preview 'bat --style=numbers --color=always --line-range :500 {}'"
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+
+# fzf with preview
+alias fzfp=fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'
