@@ -1,0 +1,4 @@
+# Neovim plugins
+neovim/autoload
+neovim/plugged
+neovim/ftplugin
