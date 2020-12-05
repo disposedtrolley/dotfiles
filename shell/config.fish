@@ -7,6 +7,9 @@ source (goenv init - | psub) # https://stanislas.blog/2018/07/how-to-use-nvm-rbe
 set -gx PATH $GOROOT/bin $PATH
 set -gx PATH $GOPATH/bin $PATH
 
+# Rust
+set -gx PATH $HOME/.cargo/bin $PATH
+
 # Local packages
 set -gx PATH $HOME/.local/bin $PATH
 
