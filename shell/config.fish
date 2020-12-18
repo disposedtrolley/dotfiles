@@ -10,6 +10,13 @@ set -gx PATH $GOPATH/bin $PATH
 # Rust
 set -gx PATH $HOME/.cargo/bin $PATH
 
+# ARM Embedded Toolchain
+set -gx PATH $HOME/gcc-arm-none-eabi-10-2020-q4-major/bin $PATH
+
+# Ruby
+set -Ux fish_user_paths $HOME/.rbenv/bin $fish_user_paths  # TODO use `fish_user_paths` everywhere.
+status --is-interactive; and rbenv init - | source
+
 # Local packages
 set -gx PATH $HOME/.local/bin $PATH
 
