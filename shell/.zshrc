@@ -106,9 +106,10 @@ export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 #
 # pyenv - https://github.com/pyenv/pyenv-installer
-export PATH="/Users/james/.pyenv/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 #
 # rbenv
 eval "$(rbenv init -)"
