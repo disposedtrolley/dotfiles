@@ -63,7 +63,7 @@ ZSH_THEME="theunraveler"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorize brew osx zsh-syntax-highlighting vi-mode z)
+plugins=(git colorize brew osx zsh-syntax-highlighting vi-mode z zsh-aws-vault)
 
 source $ZSH/oh-my-zsh.sh
 
