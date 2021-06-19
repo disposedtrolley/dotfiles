@@ -51,11 +51,12 @@ export ZEPHYR_TOOLCHAIN_VARIANT=gnuarmemb
 export GNUARMEMB_TOOLCHAIN_PATH="$ARM_TRIPLE"
 export ZEPHYR_BASE="/Users/james/zephyrproject/zephyr"
 
-# Created by `userpath` on 2020-09-30 11:52:45
-export PATH="$PATH:/Users/james/.local/bin"
-[ -f "/Users/james/.ghcup/env" ] && source "/Users/james/.ghcup/env" # ghcup-env
-
 alias sw="~/dotfiles/scripts/start_work.sh"
+
+# asdf
+GOV=$(asdf where golang)
+export GOROOT=$GOV/go
+export PATH="$GOPATH/bin:$PATH"
 
 # Starship.rs
 eval "$(starship init zsh)"
