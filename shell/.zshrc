@@ -1,33 +1,12 @@
 # oh-my-zsh init
 ZSH_DISABLE_COMPFIX=true
-plugins=(git colorize brew osx zsh-syntax-highlighting vi-mode z)
+plugins=(git colorize brew osx zsh-syntax-highlighting vi-mode z asdf)
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 export EDITOR='nvim'
-
-# ==== Version Managers ====
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-#
-# goenv
-export GOENV_ROOT="$HOME/.goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
-export PATH="$GOROOT/bin:$PATH"
-export PATH="$PATH:$GOPATH/bin"
-#
-# pyenv - https://github.com/pyenv/pyenv-installer
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-#
-# rbenv
-eval "$(rbenv init -)"
 
 
 # ==== Aliases ====
